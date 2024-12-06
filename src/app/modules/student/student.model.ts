@@ -99,7 +99,16 @@ const studentSchema = new Schema<TStudent, StudentModel>(
       },
       required: [true, 'Gender is required'],
     },
-    admissionSemester: String,
+    admissionSemester: {
+      type: Schema.Types.ObjectId,
+      ref: 'AcademicSemester',
+      required: [true, 'Academic Semester is required'],
+    },
+    academicDepartment: {
+      type: Schema.Types.ObjectId,
+      ref: 'AcademicDepartment',
+      required: [true, 'Academic Department is required'],
+    },
     dateOfBirth: { type: Date },
     email: {
       type: String,
