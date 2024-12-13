@@ -4,6 +4,7 @@ import validateRequest from '../../middlewares/validateRequest';
 import { studentValidations } from './student.validation';
 
 const router = express.Router();
+router.get('/', StudentControllers.getAllStudents);
 
 router.get('/:studentId', StudentControllers.getSingleStudent);
 
