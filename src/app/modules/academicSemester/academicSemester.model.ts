@@ -6,6 +6,7 @@ import {
 } from './academicSemester.constant';
 import { TAcademicSemester } from './academicSemester.interface';
 import appError from '../../errors/appError';
+import httpStatus from 'http-status';
 
 const academicSemesterSchema = new Schema<TAcademicSemester>(
   {

@@ -3,7 +3,7 @@ import { Student } from './student.model';
 import appError from '../../errors/appError';
 import { User } from '../user/user.model';
 import { TStudent } from './student.interface';
-import { object } from 'zod';
+
 import { studentSearchableFields } from './student.constant';
 import QueryBuilder from '../../builder/QueryBuilder';
 

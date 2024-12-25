@@ -1,8 +1,10 @@
 import catchAsync from '../utils/catchAsync';
 import sendResponse from '../utils/sendResponse';
 import { FacultyService } from './faculty.service';
+import httpStatus from 'http-status';
 
 const getAllFaculty = catchAsync(async (req, res) => {
+  console.log(req.cookies);
   const result = await FacultyService.getAllFacultyFromDB(req.query);
   sendResponse(res, {
     statusCode: httpStatus.OK,
